@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Vim - A life-time text editor - by Zhang Feng</title>
+
+        <script>
+            (function (d, ua) {
+                if ((ua.indexOf('chrome') > -1) || (ua.indexOf('safari') > -1 && ua.indexOf("mobile") === -1)) {
+                    d.className += " supported ";
+                }
+            })(document.documentElement, navigator.userAgent.toLowerCase());
+        </script>
+
+        <meta name="description" content="Vim - A life-time text editor">
+        <meta name="author" content="Zhang Feng" />
+        <meta name="keywords" content="Vim, impress.js">
+
+        <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/prefixfree.js"></script>
+    </head>
+    <body>
+
+      <div class="fallback-message">
+          <p>This presentation was build for latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+          <p>You are viewing simplified view, but most of the CSS 3D will not work for you, sorry.</p>
+      </div>
+
+      <div id="impress">
+
+        <div id="title" class="step">
+          <h1>
+              <span class="css"><span class="d3">vim</span></span><br>
+              <span class="transforms"><em>A life-time text editor</em></span>
+          </h1>
+          <span class="author">
+              <i>by</i><br/>
+              <span class="name">Zhang Feng</span> <a href="mailto:schnell18@gmail.com">schnell18@gmail.com</a>
+          </span>
+          <span>
+              <img id="imgGit" src="images/vim.svg" alt="git">
+          </span>
+        </div>
+
+          <!-- First Slide -->
+        <div id="intro" class="step" data-x="-400" data-y="-1200" data-z="-3000" data-rotate="-10" data-scale="1">
+          <h2>简介</h2>
+          <h3><b>Vi IMproved</b></h3>
+          <ul>
+            <li>Vi改良版本</li>
+            <li>跨平台可定制的高效率文本编辑器</li>
+            <li>由Bram Moolenaar开发并维护</li>
+            <li>一次学习终身受益</li>
+          </ul>
+        </div>
+
+        <!-- Vim importance -->
+        <div id="importance" class="step" data-x="1600" data-y="-1200" data-z="-3000" data-rotate="-10" data-scale="1">
+          <img src="images/moore_law.svg" alt="Moore's Law">
+        </div>
+
+        <!-- Vim importance cont-->
+        <div id="importance2" class="step" data-x="3000" data-y="-1200" data-z="-3000" data-rotate="-10" data-scale="1">
+          <h2>简介</h2>
+          <h3>软件开发技术变迁</h3>
+          <ul>
+            <li>Assembly -&gt; Procedural -&gt; OO -&gt; Functional</li>
+            <li>EJB/JSP/Servlet -&gt; SSH -&gt; SPA</li>
+            <li>jQuery -&gt; AngularJS -&gt; ReactJS</li>
+            <li>J2ME/Windows Mobile -&gt; Android/iOS + H5</li>
+          </ul>
+        </div>
+
+        <!-- Vim feature -->
+        <div id="feature" class="step" data-x="4500" data-y="-1200" data-z="-3000" data-rotate="-10" data-scale="1">
+          <h2>简介</h2>
+          <h3>优点</h3>
+          <ul>
+            <li>高效率</li>
+            <li>和操作系统深度整合</li>
+            <li>可扩展</li>
+          </ul>
+          <h3>缺点</h3>
+          <ul>
+            <li>学习难度大</li>
+          </ul>
+        </div>
+
+        <!-- Vim vs others -->
+        <div id="comparison" class="step" data-x="6000" data-y="-1200" data-z="-3000" data-rotate="-10" data-scale="1">
+          <h2>简介</h2>
+          <h3>和其它编辑器比较</h3>
+          <ul>
+            <li>GNU Emacs</li>
+            <li>Sublime</li>
+            <li>UltraEdit</li>
+          </ul>
+        </div>
+
+        <div id="emacs" class="step" data-x="57000" data-y="-16000" data-rotate="10" data-scale="0.2">
+          <p><b>G</b>enerally <b>N</b>ot Use, <b>E</b>xcept by <b>M</b>id-<b>A</b>ged <b>C</b>omputer <b>S</b>cientists</p>
+        </div>
+
+        <!-- Vim concept -->
+        <div id="concept" class="step" data-x="7500" data-y="-1200" data-z="-3000" data-rotate="-10" data-scale="1">
+          <h2>简介</h2>
+          <h3>基本概念</h3>
+          <ul>
+            <li>界面</li>
+            <li>模式</li>
+            <li>移动</li>
+            <li>操作</li>
+            <li>文本对象</li>
+            <li>寄存器</li>
+            <li>标记</li>
+            <li>宏</li>
+          </ul>
+        </div>
+
+        <!-- Vim ui -->
+        <div id="ui" class="step" data-x="4500" data-y="1200" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>界面</h3>
+          <span>
+            <img id="vimMultiWin" src="images/vim-multi-win.png" alt="Vim multi Window"/>
+          </span>
+          <ul>
+            <li>缓冲区(buffer)</li>
+            <li>窗口(window)</li>
+            <li>标签(tab)</li>
+            <li>状态栏(status line)</li>
+            <li>命令行(command line)</li>
+          </ul>
+        </div>
+
+        <!-- Vim mode -->
+        <div id="mode" class="step" data-x="3100" data-y="1200" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>模式</h3>
+          <ul>
+            <li>normal</li>
+            <li>insert</li>
+            <li>visual</li>
+            <li>visual block</li>
+          </ul>
+        </div>
+
+        <!-- Vim motion -->
+        <div id="motion" class="step" data-x="1700" data-y="1200" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>移动</h3>
+          <ul>
+            <li>字: j, k, l, h</li>
+            <li>词: w, W, b, e</li>
+            <li>段: {, }</li>
+            <li>单字符搜索: f, F, t, T</li>
+            <li>模式搜索: /, ?</li>
+            <li>:help motion</li>
+          </ul>
+        </div>
+
+        <!-- Vim operator -->
+        <div id="operator" class="step" data-x="300" data-y="1200" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>操作</h3>
+          <ul>
+            <li>insert/append/new line(i/I a/A o/O)</li>
+            <li>change(c/C)</li>
+            <li>delete(d/D)</li>
+            <li>copy(y)</li>
+            <li>paste(p/P)</li>
+            <li>indent(&lt;/&gt;)</li>
+            <li>:help operator</li>
+          </ul>
+        </div>
+
+        <!-- Vim text object -->
+        <div id="textobj" class="step" data-x="-1100" data-y="1200" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>文本对象</h3>
+          <ul>
+            <li>词(w)</li>
+            <li>句(s)</li>
+            <li>段(p)</li>
+            <li>块({} [] () &lt;&gt;)</li>
+            <li>XML/HTML标签(t)</li>
+            <li>自定义</li>
+            <li>:help textobjects</li>
+          </ul>
+        </div>
+
+        <!-- Vim register -->
+        <div id="register" class="step" data-x="-1100" data-y="2400" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>寄存器</h3>
+          <ul>
+            <li>9类寄存器</li>
+            <li>存放寄存器使用"[a-z]ymotion</li>
+            <li>复制寄存器内容使用"[a-z]p</li>
+            <li>+寄存器相当于Windows上剪切板</li>
+            <li>查看寄存器使用:reg命令</li>
+            <li>:help registers</li>
+          </ul>
+        </div>
+
+        <!-- Vim mark -->
+        <div id="mark" class="step" data-x="-2500" data-y="2400" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>标记</h3>
+          <ul>
+            <li>在正常模式用m命令记录标记</li>
+            <li>引用标记使用单引号"'"则跳转到标记所在行首个非空字符</li>
+            <li>引用标记使反单引号"`"则跳转到标记所在行和列</li>
+            <li>:help mark</li>
+          </ul>
+        </div>
+
+        <!-- Vim combine motion, operator and text object -->
+        <div id="combine" class="step" data-x="-2500" data-y="1200" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>组合规则</h3>
+          <ul>
+            <li>基本语法: 重复次数 操作 范围 文本对象</li>
+          </ul>
+          <h3>组合使用示例</h3>
+          <ul>
+            <li>5dap</li>
+            <li>2&gt;i{</li>
+            <li>cit</li>
+            <li>yi"</li>
+          </ul>
+        </div>
+
+        <!-- Vim macro -->
+        <div id="macro" class="step" data-x="-2500" data-y="3600" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>基本概念</h2>
+          <h3>宏</h3>
+          <ul>
+            <li>录制一系列命令的组合</li>
+            <li>可以多次回放以减少重复的键盘输入</li>
+            <li>正常模式使用q加寄存器名称开启录制模式</li>
+            <li>录制的宏可以作为普通文本一样编辑</li>
+          </ul>
+        </div>
+
+        <!-- Vim setup -->
+        <div id="setup" class="step" data-x="-3900" data-y="3600" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>安装配置</h2>
+          <h3>步骤</h3>
+          <ul>
+            <li>安装<a href="http://www.vim.org">Vim</a></li>
+            <li>安装<a href="http://www.python.org">Python</a></li>
+            <li>安装<a href="http://www.git-scm.com">Git</a></li>
+            <li>fork或克隆<a href="http://github.com/schnell18/dotvim">dotvim</a></li>
+          </ul>
+        </div>
+
+        <!-- Vim reference -->
+        <div id="reference" class="step" data-x="-1800" data-y="-2400" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>参考资料</h2>
+          <h4>Vim自带文档</h4>
+          <ul>
+            <li>:help user-manual</li>
+            <li>vimtutor</li>
+          </ul>
+          <h4>书</h4>
+          <ul>
+            <li><a href="http://shop.oreilly.com/product/9780596529833.do"><i>Learning the vi and Vim Editors</i></a></li>
+            <li><a href="https://pragprog.com/book/dnvim/practical-vim"><i>Practical Vim</i></a></li>
+            <li><a href="https://pragprog.com/book/bkviml/the-viml-primer"><i>The VimL Primer</i></a></li>
+          </ul>
+          <h4>在线视频</h4>
+          <ul>
+            <li><a href="http://vimcasts.org/">vimcasts</a></li>
+            <li><a href="http://www.youtube.com/">YouTube</a></li>
+          </ul>
+        </div>
+
+        <!-- Vim reference -->
+        <div id="cheatsheet" class="step" data-x="-400" data-y="-2400" data-z="-3000" data-rotate="10" data-scale="1">
+          <h2>参考资料</h2>
+          <img id="imgCheat" src="images/10-Best-VIM-Cheat-Sheet-01.jpg" alt="vim cheatsheet">
+        </div>
+
+        <!-- Epikurus image was taken by http://www.jazclass.aust.com/happiness/hap02.htm -->
+        <!-- If there are copyright problems using this image, please contact me and I'll remove it-->
+        <div id="epikurus" class="step" data-x="0" data-y="0" data-z="-50000" data-rotate="0" data-scale="0.2">
+            <img src="images/epicurus.gif" alt="Epicurus">
+            <h3>Epicurus advice:<br> <b>Quit procrastinating & learn vim</b></h3>
+            <p>
+                Γεγόναμεν ἅπαξ, δὶς δὲ οὐκ ἔστι γενέσθαι<br>δεῖ δὲ τὸν αἰῶνα μηκέτι εἶναι<br> σὺ δὲ οὐκ ὢν τῆς αὔριον κύριος ἀναβάλλῃ τὸ χαῖρο<br> ὁ δὲ βίος μελλησμῷ παραπόλλυται καὶ εἷς ἕκαστος ἡμῶν ἀσχολούμενος ἀποθνῄσκει.
+            </p>
+            <br>
+        </div>
+
+          <div id="end" class="step" data-x="0" data-y="0" data-z="1000" data-rotate="0" data-scale="0.8">
+            <span class="author">
+              Start vim learning now by cloning:
+              <br>
+              <a href="https://github.com/schnell18/dotvim">
+                <code>https://github.com/schnell18/dotvim</code>
+              </a>
+            </span>
+          </div>
+
+      </div>
+
+        <script src="js/impress.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="js/script.js"></script>
+
+        <script type="text/javascript">
+            impress().init();
+        </script>
+    </body>
+</html>
